@@ -1,0 +1,5 @@
+C:\Projects\RestaurantEPOS\RestaurantEPOS.DataAccess\bin\Debug\RestaurantEPOS.DataAccess.dll
+C:\Projects\RestaurantEPOS\RestaurantEPOS.DataAccess\bin\Debug\RestaurantEPOS.DataAccess.pdb
+C:\Projects\RestaurantEPOS\RestaurantEPOS.DataAccess\obj\Debug\RestaurantEPOS.DataAccess.csprojResolveAssemblyReference.cache
+C:\Projects\RestaurantEPOS\RestaurantEPOS.DataAccess\obj\Debug\RestaurantEPOS.DataAccess.dll
+C:\Projects\RestaurantEPOS\RestaurantEPOS.DataAccess\obj\Debug\RestaurantEPOS.DataAccess.pdb

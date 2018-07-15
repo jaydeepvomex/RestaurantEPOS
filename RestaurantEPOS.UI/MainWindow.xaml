@@ -1,0 +1,22 @@
+﻿<Window x:Class="RestaurantEPOS.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantEPOS.UI"
+        xmlns:view="clr-namespace:RestaurantEPOS.UI.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="auto" Width="auto">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="425"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <view:CategoryView Grid.Column="0" />
+        <view:ListViewGridView Grid.Column="1" />
+        <view:MenuItemView Grid.Column="2"/>
+        <view:LogoutView Grid.Column="3" />
+    </Grid>
+</Window>
