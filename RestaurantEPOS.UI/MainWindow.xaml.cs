@@ -11,6 +11,7 @@ namespace RestaurantEPOS.UI
         public MainWindow()
         {
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            this.WindowState = WindowState.Maximized;
 
             InitializeComponent();
         }

@@ -29,8 +29,11 @@ namespace RestaurantEPOS.UI.View
             //{
             //    MessageBox.Show("Incorrect password.");
             //}
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            //MainWindow mainWindow = new MainWindow();
+            //mainWindow.Show();
+            //CloseWindow(typeof(LoginWindow));
+            OrderTypeWindow window = new OrderTypeWindow();
+            window.Show();
             CloseWindow(typeof(LoginWindow));
         }
 

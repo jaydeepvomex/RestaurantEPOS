@@ -14,6 +14,8 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
+        
+        <!--Views-->
         <view:CategoryView Grid.Column="0" />
         <view:ListViewGridView Grid.Column="1" />
         <view:MenuItemView Grid.Column="2"/>

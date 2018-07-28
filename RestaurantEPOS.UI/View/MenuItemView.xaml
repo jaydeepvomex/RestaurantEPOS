@@ -4,9 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantEPOS.UI.View"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:Controls="clr-namespace:Microsoft.CSharp;assembly=System"
+             xmlns:ItemsView="clr-namespace:Microsoft.CSharp;assembly=System"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+    <Grid Name="menuItemGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
@@ -15,8 +18,37 @@
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Grid.Column="0" Click="Add_Item">Butter Chicken</Button>
+        
+        <!--Views-->
+        <!--<Button Grid.Row="0" Grid.Column="0" Click="Add_Item">Butter Chicken</Button>
         <Button Grid.Row="1" Grid.Column="0" Click="Add_Item">Garlic Nan</Button>
-        <Button Grid.Row="2" Grid.Column="0" Click="Add_Item">Pilau Rice</Button>
+        <Button Grid.Row="2" Grid.Column="0" Click="Add_Item">Pilau Rice</Button>-->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <ItemsControl>
+			<ItemsControl.ItemsPanel>
+				<ItemsPanelTemplate>
+                        <UniformGrid Columns="3" />
+                    </ItemsPanelTemplate>
+			</ItemsControl.ItemsPanel>
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+                    <Button Content="{Binding}" Margin="0,0,5,5" Click="Add_Item"/>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+            
+            <system:String>Butter Chicken</system:String>
+            <system:String>Garlic Nan</system:String>
+            <system:String>Pilau Rice</system:String>
+            <system:String>Butter Chicken</system:String>
+            <system:String>Garlic Nan</system:String>
+            <system:String>Pilau Rice</system:String>
+            <system:String>Butter Chicken</system:String>
+            <system:String>Garlic Nan</system:String>
+            <system:String>Pilau Rice</system:String>
+            <system:String>Butter Chicken</system:String>
+            <system:String>Garlic Nan</system:String>
+            <system:String>Pilau Rice</system:String>
+            </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </UserControl>

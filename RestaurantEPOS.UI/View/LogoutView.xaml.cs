@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using RestaurantEPOS.BusinessLayer;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -26,6 +27,11 @@ namespace RestaurantEPOS.UI.View
             var window = App.Current.Windows.OfType<Window>().FirstOrDefault(w => w.GetType() == type);
             if (window != null)
                 window.Close();
+        }
+
+        private void btnPayClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"You are paying for {Order.OrderType.ToString()}");
         }
     }
 }

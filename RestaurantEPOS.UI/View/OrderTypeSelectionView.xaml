@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="RestaurantEPOS.UI.View.OrderTypeSelection"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantEPOS.UI.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Table Service" Width="150" Height="150" Margin="10" FontSize="20" Click="ShowMainWindow" Name="btnTableService"/>
+            <Button Content="Takeaway"      Width="150" Height="150" Margin="10" FontSize="20" Click="ShowMainWindow" Name="btnTakeawayService"/>
+            <Button Content="Delivery"      Width="150" Height="150" Margin="10" FontSize="20" Click="ShowMainWindow" Name="btnDeliveryService"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

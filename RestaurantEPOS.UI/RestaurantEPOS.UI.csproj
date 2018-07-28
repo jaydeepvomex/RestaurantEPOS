@@ -60,6 +60,9 @@
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OrderTypeWindow.xaml.cs">
+      <DependentUpon>OrderTypeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CategoryView.xaml.cs">
       <DependentUpon>CategoryView.xaml</DependentUpon>
     </Compile>
@@ -72,7 +75,17 @@
     <Compile Include="View\MenuItemView.xaml.cs">
       <DependentUpon>MenuItemView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\OrderTypeSelectionView.xaml.cs">
+      <DependentUpon>OrderTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PinEntryView.xaml.cs">
+      <DependentUpon>PinEntryView.xaml</DependentUpon>
+    </Compile>
     <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderTypeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -118,6 +131,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\OrderTypeSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PinEntryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -148,6 +169,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantEPOS.BusinessLayer\RestaurantEPOS.BusinessLayer.csproj">
+      <Project>{1D1615FF-6888-4AAC-AE36-30A0DA7793F6}</Project>
+      <Name>RestaurantEPOS.BusinessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

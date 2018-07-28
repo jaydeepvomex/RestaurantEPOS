@@ -18,11 +18,13 @@
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
-        <Button Grid.Column="0" Grid.Row="0">Veg Starters</Button>
-        <Button Grid.Column="0" Grid.Row="1">Non.Veg Starters</Button>
-        <Button Grid.Column="0" Grid.Row="2">Indo-Chinese</Button>
-        <Button Grid.Column="0" Grid.Row="3">Main Course</Button>
-        <Button Grid.Column="0" Grid.Row="4">Nan Breads</Button>
-        <Button Grid.Column="0" Grid.Row="5">Rice</Button>
+        
+        <!--Views-->
+        <Button Grid.Column="0" Grid.Row="0" Name="btnVegStarters"    Click="HandleMenuItemSelection">Veg Starters</Button>
+        <Button Grid.Column="0" Grid.Row="1" Name="btnNonVegStarters" Click="HandleMenuItemSelection">Non.Veg Starters</Button>
+        <Button Grid.Column="0" Grid.Row="2" Name="btnIndoChinese"    Click="HandleMenuItemSelection">Indo-Chinese</Button>
+        <Button Grid.Column="0" Grid.Row="3" Name="btnMainCourse"     Click="HandleMenuItemSelection">Main Course</Button>
+        <Button Grid.Column="0" Grid.Row="4" Name="btnNanBreads"      Click="HandleMenuItemSelection">Breads</Button>
+        <Button Grid.Column="0" Grid.Row="5" Name="btnRice"           Click="HandleMenuItemSelection">Rice</Button>
     </Grid>
 </UserControl>

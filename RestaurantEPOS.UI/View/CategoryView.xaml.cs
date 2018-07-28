@@ -24,5 +24,10 @@ namespace RestaurantEPOS.UI.View
         {
             InitializeComponent();
         }
+
+        private void HandleMenuItemSelection(object sender, RoutedEventArgs e)
+        {
+            string buttonName = (sender as Button).Name;
+        }
     }
 }

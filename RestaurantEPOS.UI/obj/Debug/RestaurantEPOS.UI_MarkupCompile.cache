@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\App.xaml
-8403366528
+111523054601
 
-14-1529462293
-131254293103
-LoginWindow.xaml;View\CategoryView.xaml;View\ListViewGridView.xaml;View\ListViewGridViewSample.xaml;MainWindow.xaml;View\LoginView.xaml;View\LogoutView.xaml;View\MenuItemView.xaml;
+171492754634
+14808897130
+LoginWindow.xaml;OrderTypeWindow.xaml;View\CategoryView.xaml;View\ListViewGridView.xaml;View\ListViewGridViewSample.xaml;MainWindow.xaml;View\LoginView.xaml;View\LogoutView.xaml;View\MenuItemView.xaml;View\OrderTypeSelectionView.xaml;View\PinEntryView.xaml;
 
 False
 

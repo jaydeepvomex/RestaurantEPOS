@@ -6,11 +6,15 @@
         xmlns:local="clr-namespace:RestaurantEPOS.UI"
         xmlns:view="clr-namespace:RestaurantEPOS.UI.View"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="400" Width="400">
+        Title="LoginWindow" Height="600" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <view:LoginView />
+        
+        <!--Views-->
+        <view:LoginView Grid.Column="0"/>
+        <view:PinEntryView Grid.Column="1"/>
     </Grid>
 </Window>

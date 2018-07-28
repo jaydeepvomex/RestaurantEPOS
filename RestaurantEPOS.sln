@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantEPOS.Model", "Res
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantEPOS.DataAccess", "RestaurantEPOS.DataAccess\RestaurantEPOS.DataAccess.csproj", "{E9772DED-CB17-4F63-AEA9-5CC17CD0089C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantEPOS.BusinessLayer", "RestaurantEPOS.BusinessLayer\RestaurantEPOS.BusinessLayer.csproj", "{1D1615FF-6888-4AAC-AE36-30A0DA7793F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E9772DED-CB17-4F63-AEA9-5CC17CD0089C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9772DED-CB17-4F63-AEA9-5CC17CD0089C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9772DED-CB17-4F63-AEA9-5CC17CD0089C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D1615FF-6888-4AAC-AE36-30A0DA7793F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D1615FF-6888-4AAC-AE36-30A0DA7793F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D1615FF-6888-4AAC-AE36-30A0DA7793F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D1615FF-6888-4AAC-AE36-30A0DA7793F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

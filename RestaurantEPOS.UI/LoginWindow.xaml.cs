@@ -10,7 +10,7 @@ namespace RestaurantEPOS.UI
         public LoginWindow()
         {
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-
+            
             InitializeComponent();
         }
     }

@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="RestaurantEPOS.UI.View.PinEntryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantEPOS.UI.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" /> 
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="Staff No" Margin="10 10 10 0" />
+            <TextBox Width="100" Margin="10 0 10 10" Name="txtStaffNo"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="PIN" Margin="10 10 10 0" />
+            <PasswordBox Width="100" Margin="10 0 10 10" Name="txtInputPin" PasswordChar="*"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="7" Width="50" Height="50" Margin="5" Click="HandlePinEntryButtonClick"/>
+            <Button Content="8" Width="50" Height="50" Margin="5" Click="HandlePinEntryButtonClick"/>
+            <Button Content="9" Width="50" Height="50" Margin="5" Click="HandlePinEntryButtonClick"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="4" Width="50" Height="50" Margin="5" Click="HandlePinEntryButtonClick"/>
+            <Button Content="5" Width="50" Height="50" Margin="5" Click="HandlePinEntryButtonClick"/>
+            <Button Content="6" Width="50" Height="50" Margin="5" Click="HandlePinEntryButtonClick"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="1" Width="50" Height="50" Margin="5" Click="HandlePinEntryButtonClick"/>
+            <Button Content="2" Width="50" Height="50" Margin="5" Click="HandlePinEntryButtonClick"/>
+            <Button Content="3" Width="50" Height="50" Margin="5" Click="HandlePinEntryButtonClick"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="0" Width="100" Height="50" Margin="5" Click="HandlePinEntryButtonClick"/>
+            <Button Content="CLEAR" Width="50" Height="50" Margin="5" Click="ClearPinEntryPasswordBox"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Clock In" Width="200" Height="50" Margin="10" Click="btnClockIn"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
