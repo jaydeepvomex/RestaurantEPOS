@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantEPOS.UI.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,10 @@ namespace RestaurantEPOS.UI
             this.WindowStyle = WindowStyle.None;
 
             InitializeComponent();
+
+            lblUsername.Content = "Hello Jaydeep!";
+
+            CloseWindow.Close(typeof(LoginWindow));
         }
     }
 }

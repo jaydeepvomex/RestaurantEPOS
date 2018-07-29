@@ -5,12 +5,38 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantEPOS.UI.View"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="800" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="AquamarineButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Aquamarine" />
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+        <Style x:Key="YellowButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Yellow" />
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+        <Style x:Key="CyanButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Cyan" />
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+    </UserControl.Resources>
+    
     <Grid>
         <StackPanel Orientation="Horizontal">
-            <Button Content="Table Service" Width="150" Height="150" Margin="10" FontSize="20" Click="ShowMainWindow" Name="btnTableService"/>
-            <Button Content="Takeaway"      Width="150" Height="150" Margin="10" FontSize="20" Click="ShowMainWindow" Name="btnTakeawayService"/>
-            <Button Content="Delivery"      Width="150" Height="150" Margin="10" FontSize="20" Click="ShowMainWindow" Name="btnDeliveryService"/>
+            <Button Content="Table Service" Width="150" Height="150" Margin="10" FontSize="20" Click="ShowMainWindow" Name="btnTableService"
+                    Style="{StaticResource AquamarineButtonStyle}" />
+            
+            <Button Content="Takeaway"      Width="150" Height="150" Margin="10" FontSize="20" Click="ShowMainWindow" Name="btnTakeawayService"
+                    Style="{StaticResource YellowButtonStyle}" />
+            
+            <Button Content="Delivery"      Width="150" Height="150" Margin="10" FontSize="20" Click="ShowMainWindow" Name="btnDeliveryService"
+                    Style="{StaticResource CyanButtonStyle}" />
         </StackPanel>
     </Grid>
 </UserControl>

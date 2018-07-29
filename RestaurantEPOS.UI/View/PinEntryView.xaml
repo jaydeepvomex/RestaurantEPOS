@@ -51,7 +51,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Clock In" Width="200" Height="50" Margin="10" Click="btnClockIn"/>
+            <Button Content="Clock In" Width="160" Height="50" Margin="5" Click="btnClockIn" Background="GreenYellow" BorderBrush="Black" BorderThickness="1"/>
         </StackPanel>
     </Grid>
 </UserControl>

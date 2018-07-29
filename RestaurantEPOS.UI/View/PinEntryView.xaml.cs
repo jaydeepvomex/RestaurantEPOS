@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantEPOS.UI.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,7 @@ namespace RestaurantEPOS.UI.View
         {
             OrderTypeWindow window = new OrderTypeWindow();
             window.Show();
-            //CloseWindow(typeof(LoginWindow));
+            CloseWindow.Close(typeof(LoginWindow));
             ClearPinEntry();
         }
 

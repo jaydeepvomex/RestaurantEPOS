@@ -1,4 +1,6 @@
 ﻿using RestaurantEPOS.BusinessLayer;
+using RestaurantEPOS.UI.Helpers;
+using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,19 +21,26 @@ namespace RestaurantEPOS.UI.View
         {
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.Show();
-            CloseWindow(typeof(MainWindow));
-        }
-
-        void CloseWindow(System.Type type)
-        {
-            var window = App.Current.Windows.OfType<Window>().FirstOrDefault(w => w.GetType() == type);
-            if (window != null)
-                window.Close();
+            CloseWindow.Close(typeof(MainWindow));
         }
 
         private void btnPayClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"You are paying for {Order.OrderType.ToString()}");
+            float total = 0.0f;
+
+            foreach (var item in ListItems.Items)
+            {
+                total += item.Total;
+            }
+
+            MessageBox.Show($"You are paying for {Order.OrderType.ToString()}: total is {total.ToString("C", new CultureInfo("en-GB"))}");
+        }
+
+        private void btnShowOrderSelectionWindow(object sender, RoutedEventArgs e)
+        {
+            OrderTypeWindow orderSelectionWindows = new OrderTypeWindow();
+            orderSelectionWindows.Show();
+            CloseWindow.Close(typeof(MainWindow));
         }
     }
 }

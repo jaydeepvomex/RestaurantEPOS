@@ -7,18 +7,25 @@
         xmlns:view="clr-namespace:RestaurantEPOS.UI.View"
         mc:Ignorable="d"
         Title="OrderTypeWindow">
+   
+    
     <Grid VerticalAlignment="Center">
         <Grid.RowDefinitions>
+            <RowDefinition />
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
         
         <!--Views-->
-        <StackPanel Grid.Row="0">
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center">
+            <Label  FontSize="28" Name="lblUsername"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
             <Label Content="Select one of the following options" FontSize="28" />
         </StackPanel>
 
-        <StackPanel Grid.Row="1">
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center">
             <view:OrderTypeSelection />
         </StackPanel>
     </Grid>
