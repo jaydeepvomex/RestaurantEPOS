@@ -3,3 +3,4 @@ C:\Projects\RestaurantEPOS\RestaurantEPOS.BusinessLayer\bin\Debug\RestaurantEPOS
 C:\Projects\RestaurantEPOS\RestaurantEPOS.BusinessLayer\bin\Debug\RestaurantEPOS.BusinessLayer.pdb
 C:\Projects\RestaurantEPOS\RestaurantEPOS.BusinessLayer\obj\Debug\RestaurantEPOS.BusinessLayer.dll
 C:\Projects\RestaurantEPOS\RestaurantEPOS.BusinessLayer\obj\Debug\RestaurantEPOS.BusinessLayer.pdb
+C:\Projects\RestaurantEPOS\RestaurantEPOS.BusinessLayer\obj\Debug\RestaurantEPOS.BusinessLayer.csproj.CoreCompileInputs.cache

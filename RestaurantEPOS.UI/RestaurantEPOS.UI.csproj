@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism, Version=7.0.0.396, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.7.0.0.396\lib\net45\Prism.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -64,6 +70,11 @@
     <Compile Include="OrderTypeWindow.xaml.cs">
       <DependentUpon>OrderTypeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Startup\Bootstrapper.cs" />
+    <Compile Include="ViewModel\CategoryItemViewModel.cs" />
+    <Compile Include="ViewModel\CategoryViewModel.cs" />
+    <Compile Include="ViewModel\ICategoryViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\CategoryView.xaml.cs">
       <DependentUpon>CategoryView.xaml</DependentUpon>
     </Compile>
@@ -159,6 +170,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -175,6 +187,14 @@
     <ProjectReference Include="..\RestaurantEPOS.BusinessLayer\RestaurantEPOS.BusinessLayer.csproj">
       <Project>{1D1615FF-6888-4AAC-AE36-30A0DA7793F6}</Project>
       <Name>RestaurantEPOS.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestaurantEPOS.DataAccess\RestaurantEPOS.DataAccess.csproj">
+      <Project>{E9772DED-CB17-4F63-AEA9-5CC17CD0089C}</Project>
+      <Name>RestaurantEPOS.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestaurantEPOS.Model\RestaurantEPOS.Model.csproj">
+      <Project>{48E7BACA-FE23-42BD-B7D3-DAF78F064545}</Project>
+      <Name>RestaurantEPOS.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

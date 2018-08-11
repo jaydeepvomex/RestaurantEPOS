@@ -35,3 +35,15 @@ C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\obj\Debug\View\PinEntryView.g.cs
 C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\obj\Debug\View\PinEntryView.baml
 C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\RestaurantEPOS.BusinessLayer.dll
 C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\RestaurantEPOS.BusinessLayer.pdb
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\obj\Debug\RestaurantEPOS.UI.csproj.CoreCompileInputs.cache
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\Autofac.dll
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\Prism.dll
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\RestaurantEPOS.DataAccess.dll
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\RestaurantEPOS.Model.dll
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\EntityFramework.dll
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\RestaurantEPOS.DataAccess.pdb
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\RestaurantEPOS.DataAccess.dll.config
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\RestaurantEPOS.Model.pdb
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\Autofac.xml
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\Prism.xml
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\EntityFramework.xml

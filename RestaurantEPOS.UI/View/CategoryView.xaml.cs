@@ -28,6 +28,7 @@ namespace RestaurantEPOS.UI.View
         private void HandleMenuItemSelection(object sender, RoutedEventArgs e)
         {
             string buttonName = (sender as Button).Name;
+            MessageBox.Show(buttonName);
         }
     }
 }

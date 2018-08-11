@@ -1,4 +1,6 @@
-﻿using RestaurantEPOS.UI.Helpers;
+﻿using RestaurantEPOS.DataAccess.Interface;
+using RestaurantEPOS.DataAccess.Repository;
+using RestaurantEPOS.UI.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -30,7 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,7 +47,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\ICategoryRepository.cs" />
+    <Compile Include="Interface\IStaffRepository.cs" />
+    <Compile Include="Migrations\201808111632116_InitialDatabase.cs" />
+    <Compile Include="Migrations\201808111632116_InitialDatabase.Designer.cs">
+      <DependentUpon>201808111632116_InitialDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808111645452_AddFoodItemEntity.cs" />
+    <Compile Include="Migrations\201808111645452_AddFoodItemEntity.Designer.cs">
+      <DependentUpon>201808111645452_AddFoodItemEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808111809125_AddedStaff.cs" />
+    <Compile Include="Migrations\201808111809125_AddedStaff.Designer.cs">
+      <DependentUpon>201808111809125_AddedStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808111906253_AddedCustomerAndTables.cs" />
+    <Compile Include="Migrations\201808111906253_AddedCustomerAndTables.Designer.cs">
+      <DependentUpon>201808111906253_AddedCustomerAndTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\StaffRepository.cs" />
+    <Compile Include="RestaurantEposDbContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantEPOS.Model\RestaurantEPOS.Model.csproj">
+      <Project>{48E7BACA-FE23-42BD-B7D3-DAF78F064545}</Project>
+      <Name>RestaurantEPOS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808111632116_InitialDatabase.resx">
+      <DependentUpon>201808111632116_InitialDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808111645452_AddFoodItemEntity.resx">
+      <DependentUpon>201808111645452_AddFoodItemEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808111809125_AddedStaff.resx">
+      <DependentUpon>201808111809125_AddedStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808111906253_AddedCustomerAndTables.resx">
+      <DependentUpon>201808111906253_AddedCustomerAndTables.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
