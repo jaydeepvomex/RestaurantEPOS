@@ -1,4 +1,4 @@
-namespace RestaurantEPOS.DataAccess.Migrations
+namespace RestaurantEPOS.UI.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

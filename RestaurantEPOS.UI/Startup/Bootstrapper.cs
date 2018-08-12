@@ -1,7 +1,7 @@
 ﻿using Autofac;
-using RestaurantEPOS.DataAccess;
-using RestaurantEPOS.DataAccess.Interface;
-using RestaurantEPOS.DataAccess.Repository;
+using RestaurantEPOS.UI;
+using RestaurantEPOS.UI.Interface;
+using RestaurantEPOS.UI.Repository;
 using RestaurantEPOS.UI.ViewModel;
 
 namespace RestaurantEPOS.UI.Startup

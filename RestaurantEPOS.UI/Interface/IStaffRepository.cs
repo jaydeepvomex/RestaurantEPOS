@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestaurantEPOS.DataAccess.Interface
+namespace RestaurantEPOS.UI.Interface
 {
     public interface IStaffRepository
     {

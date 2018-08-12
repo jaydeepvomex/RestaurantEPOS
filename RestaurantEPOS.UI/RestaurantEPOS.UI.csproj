@@ -68,7 +68,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\FoodItemDataService.cs" />
+    <Compile Include="Interface\IFoodItemDataService.cs" />
+    <Compile Include="Interface\IStaffDataService.cs" />
+    <Compile Include="Data\StaffDataService.cs" />
     <Compile Include="Helpers\CloseWindow.cs" />
+    <Compile Include="Interface\ICategoryRepository.cs" />
+    <Compile Include="Interface\IStaffRepository.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ListItems.cs" />
     <Compile Include="LoginWindow.xaml.cs">
@@ -77,10 +83,13 @@
     <Compile Include="OrderTypeWindow.xaml.cs">
       <DependentUpon>OrderTypeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\StaffRepository.cs" />
     <Compile Include="Startup\Bootstrapper.cs" />
     <Compile Include="ViewModel\CategoryItemViewModel.cs" />
     <Compile Include="ViewModel\CategoryViewModel.cs" />
-    <Compile Include="ViewModel\ICategoryViewModel.cs" />
+    <Compile Include="Interface\ICategoryViewModel.cs" />
+    <Compile Include="ViewModel\FoodItemViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\CategoryView.xaml.cs">
       <DependentUpon>CategoryView.xaml</DependentUpon>

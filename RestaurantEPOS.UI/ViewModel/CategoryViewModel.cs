@@ -1,10 +1,5 @@
-﻿using RestaurantEPOS.DataAccess.Interface;
-using System;
-using System.Collections.Generic;
+﻿using RestaurantEPOS.UI.Interface;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RestaurantEPOS.UI.ViewModel
 {

@@ -1,4 +1,4 @@
-﻿using RestaurantEPOS.DataAccess.Interface;
+﻿using RestaurantEPOS.UI.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using RestaurantEPOS.Model;
 using System.Data.Entity;
 
-namespace RestaurantEPOS.DataAccess.Repository
+namespace RestaurantEPOS.UI.Repository
 {
     public class CategoryRepository : ICategoryRepository
     {

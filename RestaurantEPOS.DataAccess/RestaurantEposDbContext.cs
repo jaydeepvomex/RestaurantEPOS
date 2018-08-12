@@ -3,7 +3,7 @@ using RestaurantEPOS.Model.Entities;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace RestaurantEPOS.DataAccess
+namespace RestaurantEPOS.UI
 {
     public class RestaurantEposDbContext: DbContext
     {
