@@ -47,3 +47,5 @@ C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\RestaurantEPOS.Model.pdb
 C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\Autofac.xml
 C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\Prism.xml
 C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\EntityFramework.xml
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\bin\Debug\EntityFramework.SqlServer.xml

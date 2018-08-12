@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:RestaurantEPOS.UI.View"
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="400">
-    <Grid>
-        <Grid.ColumnDefinitions>
+    <Grid Name="CategoryGridView">
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -20,7 +20,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         
-        <!--Views-->
+        --><!--Views--><!--
         <Button Grid.Column="0" Grid.Row="0" Name="btnVegStarters"             
                 Click="HandleMenuItemSelection">Veg Starters</Button>
         <Button Grid.Column="0" Grid.Row="1" Name="btnNonVegStarters"       
@@ -34,6 +34,6 @@
         <Button Grid.Column="0" Grid.Row="5" Name="btnNanBreads"  
                 Click="HandleMenuItemSelection">Breads</Button>
         <Button Grid.Column="0" Grid.Row="6" Name="btnRice"       
-                Click="HandleMenuItemSelection">Rice</Button>
+                Click="HandleMenuItemSelection">Rice</Button>-->
     </Grid>
 </UserControl>

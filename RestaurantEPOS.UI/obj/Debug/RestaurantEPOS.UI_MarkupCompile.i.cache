@@ -16,5 +16,5 @@ C:\Projects\RestaurantEPOS\RestaurantEPOS.UI\App.xaml
 21-505052121
 LoginWindow.xaml;OrderTypeWindow.xaml;View\CategoryView.xaml;View\ListViewGridView.xaml;View\ListViewGridViewSample.xaml;MainWindow.xaml;View\LoginView.xaml;View\LogoutView.xaml;View\MenuItemView.xaml;View\OrderTypeSelectionView.xaml;View\PinEntryView.xaml;
 
-True
+False
 

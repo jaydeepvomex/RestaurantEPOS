@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RestaurantEPOS.DataAccess.Interface;
+using RestaurantEPOS.DataAccess.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,9 +25,34 @@ namespace RestaurantEPOS.UI.View
         public CategoryView()
         {
             InitializeComponent();
+
+            ColumnDefinition columnDefinition = new ColumnDefinition();
+            columnDefinition.Width = GridLength.Auto;
+            CategoryGridView.ColumnDefinitions.Add(columnDefinition);
+
+            // get categories
+            var categoriesRepo = new CategoryRepository(new DataAccess.RestaurantEposDbContext());
+
+            var categories = categoriesRepo.GetItems();
+
+            foreach (var item in categories)
+            {
+                RowDefinition row = new RowDefinition();
+                row.Height = new GridLength(1, GridUnitType.Star);
+                CategoryGridView.RowDefinitions.Add(row);
+
+                string categoryName = item.CategoryName;
+                Button button = new Button();
+                button.Name = $"btn{categoryName.Replace(" ", "").ToUpper()}";
+                button.Content = item.CategoryName;
+                button.SetValue(Grid.RowProperty, item.Id - 1);
+                button.Click += CategoryMenuClicked;
+                CategoryGridView.Children.Add(button);
+            }
+
         }
 
-        private void HandleMenuItemSelection(object sender, RoutedEventArgs e)
+        private void CategoryMenuClicked(object sender, RoutedEventArgs e)
         {
             string buttonName = (sender as Button).Name;
             MessageBox.Show(buttonName);
