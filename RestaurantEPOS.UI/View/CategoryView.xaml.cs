@@ -1,9 +1,12 @@
-﻿using RestaurantEPOS.UI.Interface;
+﻿using Prism.Events;
+using RestaurantEPOS.UI.Event;
+using RestaurantEPOS.UI.Interface;
 using RestaurantEPOS.UI.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -55,6 +58,13 @@ namespace RestaurantEPOS.UI.View
         {
             string buttonName = (sender as Button).Name;
             MessageBox.Show(buttonName);
+            string[] numbers = Regex.Split(buttonName, @"\D+");
+
+            int categoryId = Convert.ToInt16(numbers[1]);
+            EventAggregator eventAggregator = new EventAggregator();
+            eventAggregator.GetEvent<ShowCategoriesMenuItemEvent>()
+                        .Publish(categoryId);
+
         }
     }
 }

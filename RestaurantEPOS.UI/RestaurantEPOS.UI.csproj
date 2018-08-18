@@ -69,6 +69,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Data\FoodItemDataService.cs" />
+    <Compile Include="Event\ShowCategoriesMenuItemEvent.cs" />
     <Compile Include="Interface\IFoodItemDataService.cs" />
     <Compile Include="Interface\IStaffDataService.cs" />
     <Compile Include="Data\StaffDataService.cs" />

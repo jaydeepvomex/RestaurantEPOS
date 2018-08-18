@@ -1,4 +1,6 @@
-﻿using RestaurantEPOS.UI.Interface;
+﻿using Prism.Events;
+using RestaurantEPOS.UI.Event;
+using RestaurantEPOS.UI.Interface;
 using System.Collections.ObjectModel;
 
 namespace RestaurantEPOS.UI.ViewModel
@@ -6,12 +8,15 @@ namespace RestaurantEPOS.UI.ViewModel
     public class CategoryViewModel : ViewModelBase, ICategoryViewModel
     {
         private ICategoryRepository _categoryRepository;
+        private IEventAggregator _eventAggregator;
 
         public ObservableCollection<CategoryItemViewModel> Categories { get; }
 
-        public CategoryViewModel(ICategoryRepository categoryRepository)
+        public CategoryViewModel(ICategoryRepository categoryRepository,
+            IEventAggregator eventAggregator)
         {
             _categoryRepository = categoryRepository;
+            _eventAggregator = eventAggregator;
         }
 
         public void LoadAsync()
@@ -24,20 +29,20 @@ namespace RestaurantEPOS.UI.ViewModel
             }
         }
 
-        private CategoryItemViewModel _selectedCategory;
+        private int _selectedCategory;
 
-        public CategoryItemViewModel SelectedCategory
+        public int SelectedCategory
         {
             get { return _selectedCategory; }
             set
             {
                 _selectedCategory = value;
                 OnPropertyChanged();
-                //if (_selectedFriend != null)
-                //{
-                //    _eventAggregator.GetEvent<OpenFriendDetailViewEvent>()
-                //        .Publish(_selectedFriend.Id);
-                //}
+                if (_selectedCategory != 0)
+                {
+                    _eventAggregator.GetEvent<ShowCategoriesMenuItemEvent>()
+                        .Publish(_selectedCategory);
+                }
             }
         }
     }
