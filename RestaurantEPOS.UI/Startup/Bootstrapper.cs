@@ -19,9 +19,12 @@ namespace RestaurantEPOS.UI.Startup
             builder.RegisterType<RestaurantEposDbContext>().AsSelf();
 
             builder.RegisterType<CategoryViewModel>().As<ICategoryViewModel>();
+
             builder.RegisterType<FoodItemDataService>().As<IFoodItemDataService>();
+            builder.RegisterType<CategoryDataService>().As<ICategoryDataService>();
 
             builder.RegisterType<MainWindow>().AsSelf();
+            builder.RegisterType<MainViewModel>().AsSelf();
             builder.RegisterType<LoginWindow>().AsSelf();
             builder.RegisterType<OrderTypeWindow>().AsSelf();
 

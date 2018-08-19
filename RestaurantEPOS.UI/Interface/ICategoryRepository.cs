@@ -1,16 +1,12 @@
 ﻿using RestaurantEPOS.Model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RestaurantEPOS.UI.Interface
 {
-    public interface ICategoryRepository
+    public interface ICategoryDataService
     {
-        IEnumerable<Category> GetItems();
-        Category GetCategoryByID(int categoryId);
+        IEnumerable<Category> GetAll();
+        Category GetCategoryById(int categoryId);
         void InsertCategory(Category category);
         void DeleteCategory(int categoryId);
         void UpdateCategory(Category category);

@@ -13,8 +13,8 @@
     <Grid Name="MenuItemGrid">
         <!--<Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>-->
-        <!--<Grid.RowDefinitions>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -24,20 +24,24 @@
         <!--<Button Grid.Row="0" Grid.Column="0" Click="Add_Item">Butter Chicken</Button>
         <Button Grid.Row="1" Grid.Column="0" Click="Add_Item">Garlic Nan</Button>
         <Button Grid.Row="2" Grid.Column="0" Click="Add_Item">Pilau Rice</Button>-->
-        <!--<ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-        <ItemsControl>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <ItemsControl ItemsSource="{Binding FoodItems}">
 			<ItemsControl.ItemsPanel>
 				<ItemsPanelTemplate>
                         <UniformGrid Columns="3" />
                     </ItemsPanelTemplate>
 			</ItemsControl.ItemsPanel>
+            
 			<ItemsControl.ItemTemplate>
 				<DataTemplate>
-                    <Button Content="{Binding}" Margin="0,0,5,5" Click="Add_Item"/>
-				</DataTemplate>
+                        <Button Content="{Binding Name}" 
+                                Margin="0,0,5,5" 
+                                Click="Add_Item"
+                                CommandParameter="{Binding Path=Id}"/>
+                    </DataTemplate>
 			</ItemsControl.ItemTemplate>
             
-            <system:String>Butter Chicken</system:String>
+            <!--<system:String>Butter Chicken</system:String>
             <system:String>Garlic Nan</system:String>
             <system:String>Pilau Rice</system:String>
             <system:String>Butter Chicken</system:String>
@@ -48,8 +52,8 @@
             <system:String>Pilau Rice</system:String>
             <system:String>Butter Chicken</system:String>
             <system:String>Garlic Nan</system:String>
-            <system:String>Pilau Rice</system:String>
+            <system:String>Pilau Rice</system:String>-->
             </ItemsControl>
-        </ScrollViewer>-->
+        </ScrollViewer>
     </Grid>
 </UserControl>

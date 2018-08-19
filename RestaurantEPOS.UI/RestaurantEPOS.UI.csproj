@@ -91,6 +91,7 @@
     <Compile Include="ViewModel\CategoryViewModel.cs" />
     <Compile Include="Interface\ICategoryViewModel.cs" />
     <Compile Include="ViewModel\FoodItemViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\CategoryView.xaml.cs">
       <DependentUpon>CategoryView.xaml</DependentUpon>

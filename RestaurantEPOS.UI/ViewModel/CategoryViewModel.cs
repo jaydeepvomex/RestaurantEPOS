@@ -7,25 +7,25 @@ namespace RestaurantEPOS.UI.ViewModel
 {
     public class CategoryViewModel : ViewModelBase, ICategoryViewModel
     {
-        private ICategoryRepository _categoryRepository;
+        private ICategoryDataService _categoryDataService;
         private IEventAggregator _eventAggregator;
 
         public ObservableCollection<CategoryItemViewModel> Categories { get; }
 
-        public CategoryViewModel(ICategoryRepository categoryRepository,
+        public CategoryViewModel(ICategoryDataService categoryDataService,
             IEventAggregator eventAggregator)
         {
-            _categoryRepository = categoryRepository;
+            _categoryDataService = categoryDataService;
             _eventAggregator = eventAggregator;
         }
 
         public void LoadAsync()
         {
-            var categories = _categoryRepository.GetItems();
+            var categories = _categoryDataService.GetAll();
             Categories.Clear();
             foreach (var item in categories)
             {
-                Categories.Add(new CategoryItemViewModel(item.Id, item.FoodItems.ToString()));
+                Categories.Add(new CategoryItemViewModel(item.Id, item.CategoryName.ToString()));
             }
         }
 

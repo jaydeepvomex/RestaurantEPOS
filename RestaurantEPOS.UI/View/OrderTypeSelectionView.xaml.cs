@@ -1,4 +1,9 @@
-﻿using RestaurantEPOS.BusinessLayer;
+﻿using Autofac;
+using RestaurantEPOS.BusinessLayer;
+using RestaurantEPOS.UI.Data;
+using RestaurantEPOS.UI.Repository;
+using RestaurantEPOS.UI.Startup;
+using RestaurantEPOS.UI.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +37,10 @@ namespace RestaurantEPOS.UI.View
 
             SetOrderServiceType(orderType);
 
-            MainWindow mainWindow = new MainWindow();
+            var bootstrapper = new Bootstrapper();
+            var container = bootstrapper.Bootstrap();
+
+            var mainWindow = container.Resolve<MainWindow>();
             mainWindow.Show();
             CloseWindow(typeof(OrderTypeWindow));
         }

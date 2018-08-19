@@ -1,29 +1,26 @@
 ﻿using RestaurantEPOS.UI.Interface;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using RestaurantEPOS.Model;
 using System.Data.Entity;
 
 namespace RestaurantEPOS.UI.Repository
 {
-    public class CategoryRepository : ICategoryRepository
+    public class CategoryDataService : ICategoryDataService
     {
         private RestaurantEposDbContext context;
 
-        public CategoryRepository(RestaurantEposDbContext context)
+        public CategoryDataService(RestaurantEposDbContext context)
         {
             this.context = context;
         }
 
-        public IEnumerable<Category> GetItems()
+        public IEnumerable<Category> GetAll()
         {
             return context.Categories.ToList();
         }
 
-        public Category GetCategoryByID(int categoryId)
+        public Category GetCategoryById(int categoryId)
         {
             return context.Categories.Find(categoryId);
         }

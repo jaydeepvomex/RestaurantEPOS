@@ -9,8 +9,9 @@
     <Grid Name="CategoryGridView">
         <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
+            --><!--<ColumnDefinition Width="auto"/>--><!--
+        </Grid.ColumnDefinitions>-->
+        <!--<Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -18,10 +19,10 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        </Grid.RowDefinitions>-->
         
-        --><!--Views--><!--
-        <Button Grid.Column="0" Grid.Row="0" Name="btnVegStarters"             
+        <!--Views-->
+        <!--<Button Grid.Column="0" Grid.Row="0" Name="btnVegStarters"             
                 Click="HandleMenuItemSelection">Veg Starters</Button>
         <Button Grid.Column="0" Grid.Row="1" Name="btnNonVegStarters"       
                 Click="HandleMenuItemSelection">Non.Veg Starters</Button>
@@ -35,5 +36,24 @@
                 Click="HandleMenuItemSelection">Breads</Button>
         <Button Grid.Column="0" Grid.Row="6" Name="btnRice"       
                 Click="HandleMenuItemSelection">Rice</Button>-->
+        <!--<ListView ItemsSource="{Binding Categories}" Grid.Column="0"
+                  DisplayMemberPath="CategoryName"/>-->
+
+        <ItemsControl ItemsSource="{Binding Categories}">
+            <!-- ItemsPanelTemplate -->
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="1" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <!-- ItemTemplate -->
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button x:Name="btnCategory" Content="{Binding }" Click="CategoryMenuClicked" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
     </Grid>
 </UserControl>

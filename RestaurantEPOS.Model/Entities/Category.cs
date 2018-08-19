@@ -12,5 +12,10 @@ namespace RestaurantEPOS.Model
         public string CategoryName { get; set; }
 
         public ICollection<FoodItem> FoodItems { get; set; }
+
+        public override string ToString()
+        {
+            return CategoryName;
+        }
     }
 }

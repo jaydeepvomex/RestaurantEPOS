@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RestaurantEPOS.UI"
         xmlns:view="clr-namespace:RestaurantEPOS.UI.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="auto" Width="auto">
+        Title="Main Window" Height="auto" Width="auto">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
@@ -18,7 +18,7 @@
         <!--Views-->
         <view:CategoryView Grid.Column="0" />
         <view:ListViewGridView Grid.Column="1" />
-        <view:MenuItemView Grid.Column="2" DataContext="{Binding FoodItemViewModel}"/>
+        <view:MenuItemView Grid.Column="2" />
         <view:LogoutView Grid.Column="3" />
     </Grid>
 </Window>
