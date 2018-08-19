@@ -72,7 +72,27 @@ namespace RestaurantEPOS.UI.View
 
                 var item = foodItems.Where(x => x.Id == itemId).SingleOrDefault();
 
-                ListItems.Items.Add(new Item() { Name = item.Name, Qty = 1, Price = (float)item.Price, Total = 3.00F });
+                var isItemInCurrentList = ListItems.Items.Where(x => x.Name == item.Name).Any();
+                
+                if (isItemInCurrentList)
+                {
+                    // increment
+                    if (ListItems.Items.Where(x => x.Name == item.Name).Any())
+                    {
+                        int index = ListItems.Items.IndexOf(ListItems.Items.Where(x => x.Name == item.Name).SingleOrDefault());
+
+                        var itemToIncrement = ListItems.Items[index];
+                        ListItems.Items.Remove(itemToIncrement);
+                        itemToIncrement.Qty += 1;
+                        itemToIncrement.Total = itemToIncrement.Qty * itemToIncrement.Price;
+                        ListItems.Items.Add(itemToIncrement);
+                    }
+                }
+                else
+                {
+                    // add as new item
+                    ListItems.Items.Add(new Item() { Name = item.Name, Qty = 1, Price = (float)item.Price, Total = 3.00F });
+                }
 
                 //MessageBox.Show(buttonName);
             }
