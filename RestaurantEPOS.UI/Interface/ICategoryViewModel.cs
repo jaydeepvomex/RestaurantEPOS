@@ -8,6 +8,6 @@ namespace RestaurantEPOS.UI.ViewModel
 {
     public interface ICategoryViewModel
     {
-        void LoadAsync();
+        void Load();
     }
 }
