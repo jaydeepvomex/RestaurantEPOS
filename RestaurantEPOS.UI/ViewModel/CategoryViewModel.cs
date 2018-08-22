@@ -2,6 +2,7 @@
 using RestaurantEPOS.UI.Event;
 using RestaurantEPOS.UI.Interface;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace RestaurantEPOS.UI.ViewModel
 {
@@ -17,9 +18,11 @@ namespace RestaurantEPOS.UI.ViewModel
         {
             _categoryDataService = categoryDataService;
             _eventAggregator = eventAggregator;
+
+            Categories = new ObservableCollection<CategoryItemViewModel>();
         }
 
-        public void LoadAsync()
+        public void Load()
         {
             var categories = _categoryDataService.GetAll();
             Categories.Clear();
