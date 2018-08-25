@@ -1,5 +1,0 @@
-C:\Projects\RestaurantEPOS\RestaurantEPOS.Model\bin\Debug\RestaurantEPOS.Model.dll
-C:\Projects\RestaurantEPOS\RestaurantEPOS.Model\bin\Debug\RestaurantEPOS.Model.pdb
-C:\Projects\RestaurantEPOS\RestaurantEPOS.Model\obj\Debug\RestaurantEPOS.Model.csproj.CoreCompileInputs.cache
-C:\Projects\RestaurantEPOS\RestaurantEPOS.Model\obj\Debug\RestaurantEPOS.Model.dll
-C:\Projects\RestaurantEPOS\RestaurantEPOS.Model\obj\Debug\RestaurantEPOS.Model.pdb
