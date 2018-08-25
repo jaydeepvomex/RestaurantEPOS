@@ -32,7 +32,7 @@ namespace RestaurantEPOS.UI.View
         {
             OrderTypeWindow window = new OrderTypeWindow();
             window.Show();
-            CloseWindow.Close(typeof(IFoorItemDataService));
+            CloseWindow.Close(typeof(LoginWindow));
             ClearPinEntry();
         }
 

@@ -19,7 +19,7 @@ namespace RestaurantEPOS.UI.View
 
         private void btnLogoutClicked(object sender, RoutedEventArgs e)
         {
-            IFoorItemDataService loginWindow = new IFoorItemDataService();
+            LoginWindow loginWindow = new LoginWindow();
             loginWindow.Show();
             CloseWindow.Close(typeof(MainWindow));
         }

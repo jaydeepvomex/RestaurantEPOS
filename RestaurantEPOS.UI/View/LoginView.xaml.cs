@@ -34,7 +34,7 @@ namespace RestaurantEPOS.UI.View
             //CloseWindow(typeof(LoginWindow));
             OrderTypeWindow window = new OrderTypeWindow();
             window.Show();
-            CloseWindow(typeof(IFoorItemDataService));
+            CloseWindow(typeof(LoginWindow));
         }
 
         void CloseWindow(System.Type type)
