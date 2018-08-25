@@ -7,6 +7,6 @@ namespace RestaurantEPOS.UI.Interface
 {
     public interface IFoodItemDataService
     {
-        Task<IEnumerable<LookupItem>> GetFoodItemAsync();
+        Task<IEnumerable<FoodItemLookup>> GetFoodItemAsync();
     }
 }

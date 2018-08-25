@@ -46,6 +46,7 @@
     <Compile Include="Entities\Staff.cs" />
     <Compile Include="Entities\FoodItem.cs" />
     <Compile Include="Entities\Table.cs" />
+    <Compile Include="Lookup\FoodItemLookup.cs" />
     <Compile Include="Lookup\LookupItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

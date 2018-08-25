@@ -4,6 +4,6 @@ namespace RestaurantEPOS.UI.Interface
 {
     public interface IMenuViewModel
     {
-        Task LoadAsync();
+        Task LoadAsync(int categoryId);
     }
 }

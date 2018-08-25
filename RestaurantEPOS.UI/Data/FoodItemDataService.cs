@@ -18,16 +18,18 @@ namespace RestaurantEPOS.UI.Data
             _contextCreator = context;
         }
 
-        public async Task<IEnumerable<LookupItem>> GetFoodItemAsync()
+        public async Task<IEnumerable<FoodItemLookup>> GetFoodItemAsync()
         {
             using (var ctx = _contextCreator())
             {
                 return await ctx.FoodItems.AsNoTracking()
                     .Select(f =>
-                    new LookupItem
+                    new FoodItemLookup
                     {
                         Id = f.Id,
-                        DisplayMember = f.Name
+                        DisplayMember = f.Name,
+                        Price = f.Price,
+                        CategoryId = f.CategoryId
                     })
                     .ToListAsync();
             }
