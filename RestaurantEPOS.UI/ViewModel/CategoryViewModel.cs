@@ -1,5 +1,4 @@
 ﻿using Prism.Events;
-using RestaurantEPOS.Model.Lookup;
 using RestaurantEPOS.UI.Event;
 using RestaurantEPOS.UI.Interface;
 using System.Collections.ObjectModel;
