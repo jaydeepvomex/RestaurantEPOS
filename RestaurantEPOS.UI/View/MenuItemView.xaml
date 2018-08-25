@@ -34,7 +34,7 @@
             
 			<ItemsControl.ItemTemplate>
 				<DataTemplate>
-                        <Button Content="{Binding Name}" 
+                        <Button Content="{Binding DisplayMember}" 
                                 Margin="0,0,5,5" 
                                 Click="Add_Item"
                                 CommandParameter="{Binding Path=Id}" />

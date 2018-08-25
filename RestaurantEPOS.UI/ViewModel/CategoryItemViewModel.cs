@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RestaurantEPOS.UI.ViewModel
+﻿namespace RestaurantEPOS.UI.ViewModel
 {
     public class CategoryItemViewModel : ViewModelBase
     {

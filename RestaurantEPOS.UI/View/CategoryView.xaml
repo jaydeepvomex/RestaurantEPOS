@@ -36,21 +36,21 @@
                 Click="HandleMenuItemSelection">Breads</Button>
         <Button Grid.Column="0" Grid.Row="6" Name="btnRice"       
                 Click="HandleMenuItemSelection">Rice</Button>-->
-        <!--<ListView ItemsSource="{Binding Categories}" Grid.Column="0"
-                  DisplayMemberPath="CategoryName"/>-->
+        <!--<ListView ItemsSource="{Binding Categories}" 
+                  DisplayMemberPath="DisplayMember"/>-->
 
         <ItemsControl ItemsSource="{Binding Categories}">
-            <!-- ItemsPanelTemplate -->
+             <!--ItemsPanelTemplate--> 
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid Columns="1" />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
 
-            <!-- ItemTemplate -->
+             <!--ItemTemplate--> 
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button x:Name="btnCategory" Content="{Binding }" Click="CategoryMenuClicked" />
+                    <Button x:Name="btnCategory" Content="{Binding DisplayMember}" Click="CategoryMenuClicked" />
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>

@@ -16,9 +16,9 @@
         </Grid.ColumnDefinitions>
         
         <!--Views-->
-        <view:CategoryView Grid.Column="0" />
+        <view:CategoryView Grid.Column="0" DataContext="{Binding CategoryViewModel}"/>
         <view:ListViewGridView Grid.Column="1" />
-        <view:MenuItemView Grid.Column="2" />
+        <view:MenuItemView Grid.Column="2" DataContext="{Binding MenuViewModel}"/>
         <view:LogoutView Grid.Column="3" />
     </Grid>
 </Window>

@@ -1,5 +1,8 @@
-﻿using RestaurantEPOS.UI.Data;
-using RestaurantEPOS.UI.Repository;
+﻿using Autofac;
+using RestaurantEPOS.UI.Data;
+using RestaurantEPOS.UI.Data;
+using RestaurantEPOS.UI.Interface;
+using RestaurantEPOS.UI.Startup;
 using System;
 using System.Linq;
 using System.Windows;
@@ -44,7 +47,7 @@ namespace RestaurantEPOS.UI.View
             //}
         }
 
-        private void Add_Item(object sender, RoutedEventArgs e)
+        private async void Add_Item(object sender, RoutedEventArgs e)
         {
             if (((System.Windows.Controls.ContentControl)e.Source).Content.ToString() == "Butter Chicken")
             {
@@ -62,8 +65,12 @@ namespace RestaurantEPOS.UI.View
             {
                 //string buttonName = (sender as Button).Name;
                 string buttonName = (sender as Button).CommandParameter.ToString();
-                var foodItemDataService = new FoodItemDataService(new RestaurantEposDbContext());
-                var foodItems = foodItemDataService.GetAll();
+
+                var bootstrapper = new Bootstrapper();
+                var container = bootstrapper.Bootstrap();
+
+                var foodItemDataService = container.Resolve<IFoodItemDataService>();
+                var foodItems = await foodItemDataService.GetFoodItemAsync();
                 //var vegStarters = foodItems.Where(x => x.CategoryId == 1);
                 int itemId = Convert.ToInt16(buttonName);
 
@@ -72,14 +79,14 @@ namespace RestaurantEPOS.UI.View
 
                 var item = foodItems.Where(x => x.Id == itemId).SingleOrDefault();
 
-                var isItemInCurrentList = ListItems.Items.Where(x => x.Name == item.Name).Any();
+                var isItemInCurrentList = ListItems.Items.Where(x => x.Name == item.DisplayMember).Any();
                 
                 if (isItemInCurrentList)
                 {
                     // increment
-                    if (ListItems.Items.Where(x => x.Name == item.Name).Any())
+                    if (ListItems.Items.Where(x => x.Name == item.DisplayMember).Any())
                     {
-                        int index = ListItems.Items.IndexOf(ListItems.Items.Where(x => x.Name == item.Name).SingleOrDefault());
+                        int index = ListItems.Items.IndexOf(ListItems.Items.Where(x => x.Name == item.DisplayMember).SingleOrDefault());
 
                         var itemToIncrement = ListItems.Items[index];
                         ListItems.Items.Remove(itemToIncrement);
@@ -91,7 +98,8 @@ namespace RestaurantEPOS.UI.View
                 else
                 {
                     // add as new item
-                    ListItems.Items.Add(new Item() { Name = item.Name, Qty = 1, Price = (float)item.Price, Total = 3.00F });
+                    //ListItems.Items.Add(new Item() { Name = item.DisplayMember, Qty = 1, Price = (float)item.Price, Total = 3.00F });
+                    ListItems.Items.Add(new Item() { Name = item.DisplayMember, Qty = 1, Price = (float)3.00, Total = 3.00F });
                 }
 
                 //MessageBox.Show(buttonName);

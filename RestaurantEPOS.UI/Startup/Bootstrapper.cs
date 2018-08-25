@@ -1,9 +1,7 @@
 ﻿using Autofac;
 using Prism.Events;
-using RestaurantEPOS.UI;
 using RestaurantEPOS.UI.Data;
 using RestaurantEPOS.UI.Interface;
-using RestaurantEPOS.UI.Repository;
 using RestaurantEPOS.UI.ViewModel;
 
 namespace RestaurantEPOS.UI.Startup
@@ -18,16 +16,18 @@ namespace RestaurantEPOS.UI.Startup
 
             builder.RegisterType<RestaurantEposDbContext>().AsSelf();
 
-            builder.RegisterType<CategoryViewModel>().As<ICategoryViewModel>();
-
-            builder.RegisterType<FoodItemDataService>().As<IFoodItemDataService>();
-            builder.RegisterType<CategoryDataService>().As<ICategoryDataService>();
-
             builder.RegisterType<MainWindow>().AsSelf();
             builder.RegisterType<MainViewModel>().AsSelf();
-            builder.RegisterType<LoginWindow>().AsSelf();
+            builder.RegisterType<IFoorItemDataService>().AsSelf();
             builder.RegisterType<OrderTypeWindow>().AsSelf();
 
+            builder.RegisterType<CategoryViewModel>().As<ICategoryViewModel>();
+            builder.RegisterType<MenuViewModel>().As<IMenuViewModel>();
+
+            builder.RegisterType<CategoryDataService>().As<ICategoryDataService>();
+            builder.RegisterType<FoodItemDataService>().As<IFoodItemDataService>();
+            builder.RegisterType<StaffDataService>().As<IStaffDataService>();
+           
             return builder.Build();
         }
     }

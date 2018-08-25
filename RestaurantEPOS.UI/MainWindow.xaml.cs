@@ -1,5 +1,4 @@
-﻿using RestaurantEPOS.UI.View;
-using RestaurantEPOS.UI.ViewModel;
+﻿using RestaurantEPOS.UI.ViewModel;
 using System.Windows;
 
 namespace RestaurantEPOS.UI
@@ -19,9 +18,9 @@ namespace RestaurantEPOS.UI
             Loaded += MainWindow_Loaded;
         }
 
-        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            _viewModel.Load();
+            await _viewModel.LoadAsync();
         }
     }
 }

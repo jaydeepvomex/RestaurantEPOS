@@ -71,11 +71,11 @@
     <Compile Include="Data\FoodItemDataService.cs" />
     <Compile Include="Event\ShowCategoriesMenuItemEvent.cs" />
     <Compile Include="Interface\IFoodItemDataService.cs" />
+    <Compile Include="Interface\IMenuViewModel.cs" />
     <Compile Include="Interface\IStaffDataService.cs" />
     <Compile Include="Data\StaffDataService.cs" />
     <Compile Include="Helpers\CloseWindow.cs" />
-    <Compile Include="Interface\ICategoryRepository.cs" />
-    <Compile Include="Interface\IStaffRepository.cs" />
+    <Compile Include="Interface\ICategoryDataService.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ListItems.cs" />
     <Compile Include="LoginWindow.xaml.cs">
@@ -84,14 +84,14 @@
     <Compile Include="OrderTypeWindow.xaml.cs">
       <DependentUpon>OrderTypeWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Repository\CategoryRepository.cs" />
-    <Compile Include="Repository\StaffRepository.cs" />
+    <Compile Include="Data\CategoryDataService.cs" />
     <Compile Include="Startup\Bootstrapper.cs" />
     <Compile Include="ViewModel\CategoryItemViewModel.cs" />
     <Compile Include="ViewModel\CategoryViewModel.cs" />
     <Compile Include="Interface\ICategoryViewModel.cs" />
-    <Compile Include="ViewModel\FoodItemViewModel.cs" />
+    <Compile Include="ViewModel\MenuItemViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\CategoryView.xaml.cs">
       <DependentUpon>CategoryView.xaml</DependentUpon>

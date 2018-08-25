@@ -2,7 +2,7 @@
 
 namespace RestaurantEPOS.UI.Interface
 {
-    public interface ICategoryViewModel
+    public interface IMenuViewModel
     {
         Task LoadAsync();
     }

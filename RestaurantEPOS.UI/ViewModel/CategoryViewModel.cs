@@ -1,4 +1,5 @@
 ﻿using Prism.Events;
+using RestaurantEPOS.Model.Lookup;
 using RestaurantEPOS.UI.Event;
 using RestaurantEPOS.UI.Interface;
 using System.Collections.ObjectModel;
@@ -11,24 +12,23 @@ namespace RestaurantEPOS.UI.ViewModel
         private ICategoryDataService _categoryDataService;
         private IEventAggregator _eventAggregator;
 
-        public ObservableCollection<CategoryItemViewModel> Categories { get; }
+        public ObservableCollection<LookupItem> Categories { get; }
 
-        public CategoryViewModel(ICategoryDataService categoryDataService,
-            IEventAggregator eventAggregator)
+        public CategoryViewModel(ICategoryDataService categoryDataService, IEventAggregator eventAggregator)
         {
             _categoryDataService = categoryDataService;
             _eventAggregator = eventAggregator;
 
-            Categories = new ObservableCollection<CategoryItemViewModel>();
+            Categories = new ObservableCollection<LookupItem>();
         }
 
-        public void Load()
+        public async Task LoadAsync()
         {
-            var categories = _categoryDataService.GetAll();
+            var lookup = await _categoryDataService.GetCategoryLookupAsync();
             Categories.Clear();
-            foreach (var item in categories)
+            foreach (var item in lookup)
             {
-                Categories.Add(new CategoryItemViewModel(item.Id, item.CategoryName.ToString()));
+                Categories.Add(item);
             }
         }
 

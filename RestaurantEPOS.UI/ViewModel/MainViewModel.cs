@@ -1,57 +1,23 @@
-﻿using RestaurantEPOS.Model;
-using RestaurantEPOS.UI.Interface;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using RestaurantEPOS.UI.Interface;
+using System.Threading.Tasks;
 
 namespace RestaurantEPOS.UI.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        private int _selectedCategory;
+        public ICategoryViewModel CategoryViewModel { get; }
+        public IMenuViewModel MenuViewModel { get; }
 
-        private IFoodItemDataService _foodItemDataService;
-        private ICategoryDataService _categoryDataService;
-
-        public ObservableCollection<FoodItem> FoodItems { get; set; }
-        public ObservableCollection<Category> Categories { get; set; }
-
-        public MainViewModel(IFoodItemDataService foodItemDataService,
-            ICategoryDataService categoryDataService)
+        public MainViewModel(ICategoryViewModel categoryViewModel, IMenuViewModel menuViewModel)
         {
-            FoodItems = new ObservableCollection<FoodItem>();
-            Categories = new ObservableCollection<Category>();
-
-            _foodItemDataService = foodItemDataService;
-            _categoryDataService = categoryDataService;
+            CategoryViewModel = categoryViewModel;
+            MenuViewModel = menuViewModel;
         }
 
-        public void Load()
+        public async Task LoadAsync()
         {
-            var foodItems = _foodItemDataService.GetAll().Where(x => x.CategoryId == 2);
-            var categories = _categoryDataService.GetAll();
-
-            FoodItems.Clear();
-            Categories.Clear();
-
-            foreach (var food in foodItems)
-            {
-                FoodItems.Add(food);
-            }
-
-            foreach (var category in categories)
-            {
-                Categories.Add(category);
-            }
-        }
-
-        public int SelectedCategory
-        {
-            get { return _selectedCategory; }
-            set
-            {
-                _selectedCategory = value;
-                OnPropertyChanged();
-            }
+            await CategoryViewModel.LoadAsync();
+            await MenuViewModel.LoadAsync();
         }
     }
 }

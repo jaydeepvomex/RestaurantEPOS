@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Data.Entity;
 
-namespace RestaurantEPOS.UI
+namespace RestaurantEPOS.UI.Data
 {
     public class StaffDataService : IStaffDataService
     {

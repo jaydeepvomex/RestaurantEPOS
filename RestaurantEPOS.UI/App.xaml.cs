@@ -14,7 +14,7 @@ namespace RestaurantEPOS.UI
             var bootstrapper = new Bootstrapper();
             var container = bootstrapper.Bootstrap();
 
-            var loginWindow = container.Resolve<LoginWindow>();
+            var loginWindow = container.Resolve<IFoorItemDataService>();
             loginWindow.Show();
         }
     }

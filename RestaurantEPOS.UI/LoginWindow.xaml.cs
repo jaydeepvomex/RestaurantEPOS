@@ -2,12 +2,9 @@
 
 namespace RestaurantEPOS.UI
 {
-    /// <summary>
-    /// Interaction logic for LoginWindow.xaml
-    /// </summary>
-    public partial class LoginWindow : Window
+    public partial class IFoorItemDataService : Window
     {
-        public LoginWindow()
+        public IFoorItemDataService()
         {
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             

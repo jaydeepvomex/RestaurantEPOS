@@ -1,6 +1,5 @@
 C:\Projects\RestaurantEPOS\RestaurantEPOS.BusinessLayer\bin\Debug\RestaurantEPOS.BusinessLayer.dll
 C:\Projects\RestaurantEPOS\RestaurantEPOS.BusinessLayer\bin\Debug\RestaurantEPOS.BusinessLayer.pdb
-C:\Projects\RestaurantEPOS\RestaurantEPOS.BusinessLayer\obj\Debug\RestaurantEPOS.BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Projects\RestaurantEPOS\RestaurantEPOS.BusinessLayer\obj\Debug\RestaurantEPOS.BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Projects\RestaurantEPOS\RestaurantEPOS.BusinessLayer\obj\Debug\RestaurantEPOS.BusinessLayer.dll
 C:\Projects\RestaurantEPOS\RestaurantEPOS.BusinessLayer\obj\Debug\RestaurantEPOS.BusinessLayer.pdb

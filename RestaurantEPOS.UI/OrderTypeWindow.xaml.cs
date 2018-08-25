@@ -29,7 +29,7 @@ namespace RestaurantEPOS.UI
 
             lblUsername.Content = "Hello Jaydeep!";
 
-            CloseWindow.Close(typeof(LoginWindow));
+            CloseWindow.Close(typeof(IFoorItemDataService));
         }
     }
 }
