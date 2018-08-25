@@ -17,7 +17,7 @@ namespace RestaurantEPOS.UI.ViewModel
         public async Task LoadAsync()
         {
             await CategoryViewModel.LoadAsync();
-            await MenuViewModel.LoadAsync();
+            await MenuViewModel.LoadAsync(1);
         }
     }
 }

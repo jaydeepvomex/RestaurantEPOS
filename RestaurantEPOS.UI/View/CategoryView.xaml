@@ -7,53 +7,27 @@
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="400">
     <Grid Name="CategoryGridView">
-        <!--<Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            --><!--<ColumnDefinition Width="auto"/>--><!--
-        </Grid.ColumnDefinitions>-->
-        <!--<Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>-->
-        
         <!--Views-->
-        <!--<Button Grid.Column="0" Grid.Row="0" Name="btnVegStarters"             
-                Click="HandleMenuItemSelection">Veg Starters</Button>
-        <Button Grid.Column="0" Grid.Row="1" Name="btnNonVegStarters"       
-                Click="HandleMenuItemSelection">Non.Veg Starters</Button>
-        <Button Grid.Column="0" Grid.Row="2" Name="btnIndoChineseVegStarters" 
-                Click="HandleMenuItemSelection">Indo-Chinese Veg Starters</Button>
-        <Button Grid.Column="0" Grid.Row="3" Name="btnIndoChineseNonVegStarters" 
-                Click="HandleMenuItemSelection">Indo-Chinese Non-Veg Starters</Button>
-        <Button Grid.Column="0" Grid.Row="4" Name="btnMainCourse"        
-                Click="HandleMenuItemSelection">Main Course</Button>
-        <Button Grid.Column="0" Grid.Row="5" Name="btnNanBreads"  
-                Click="HandleMenuItemSelection">Breads</Button>
-        <Button Grid.Column="0" Grid.Row="6" Name="btnRice"       
-                Click="HandleMenuItemSelection">Rice</Button>-->
-        <!--<ListView ItemsSource="{Binding Categories}" 
-                  DisplayMemberPath="DisplayMember"/>-->
-
-        <ItemsControl ItemsSource="{Binding Categories}">
-             <!--ItemsPanelTemplate--> 
+        <ListView ItemsSource="{Binding Categories}" 
+                  SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
+                  DisplayMemberPath="DisplayMember"/>
+        <!--<ItemsControl ItemsSource="{Binding Categories}">
+             --><!--ItemsPanelTemplate--><!-- 
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid Columns="1" />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
 
-             <!--ItemTemplate--> 
+             --><!--ItemTemplate--><!-- 
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button x:Name="btnCategory" Content="{Binding DisplayMember}" Click="CategoryMenuClicked" />
+                    <Button x:Name="btnCategory"
+                            Content="{Binding DisplayMember}" 
+                            Click="CategoryMenuClicked" 
+                            CommandParameter="{Binding SelectedCategory}" />
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
-        </ItemsControl>
-
+        </ItemsControl>-->
     </Grid>
 </UserControl>

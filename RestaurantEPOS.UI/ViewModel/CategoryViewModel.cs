@@ -12,14 +12,14 @@ namespace RestaurantEPOS.UI.ViewModel
         private ICategoryDataService _categoryDataService;
         private IEventAggregator _eventAggregator;
 
-        public ObservableCollection<LookupItem> Categories { get; }
+        public ObservableCollection<CategoryItemViewModel> Categories { get; }
 
         public CategoryViewModel(ICategoryDataService categoryDataService, IEventAggregator eventAggregator)
         {
             _categoryDataService = categoryDataService;
             _eventAggregator = eventAggregator;
 
-            Categories = new ObservableCollection<LookupItem>();
+            Categories = new ObservableCollection<CategoryItemViewModel>();
         }
 
         public async Task LoadAsync()
@@ -28,23 +28,23 @@ namespace RestaurantEPOS.UI.ViewModel
             Categories.Clear();
             foreach (var item in lookup)
             {
-                Categories.Add(item);
+                Categories.Add(new CategoryItemViewModel(item.Id, item.DisplayMember));
             }
         }
 
-        private int _selectedCategory;
+        private CategoryItemViewModel _selectedCategory;
 
-        public int SelectedCategory
+        public CategoryItemViewModel SelectedCategory
         {
             get { return _selectedCategory; }
             set
             {
                 _selectedCategory = value;
                 OnPropertyChanged();
-                if (_selectedCategory != 0)
+                if (_selectedCategory != null)
                 {
                     _eventAggregator.GetEvent<ShowCategoriesMenuItemEvent>()
-                        .Publish(_selectedCategory);
+                        .Publish(_selectedCategory.Id);
                 }
             }
         }

@@ -4,6 +4,7 @@ using RestaurantEPOS.Model.Lookup;
 using RestaurantEPOS.UI.Event;
 using RestaurantEPOS.UI.Interface;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace RestaurantEPOS.UI.ViewModel
@@ -13,7 +14,7 @@ namespace RestaurantEPOS.UI.ViewModel
         private IFoodItemDataService _foodItemDataService;
         private IEventAggregator _eventAggregator;
 
-        public ObservableCollection<LookupItem> FoodItems { get; set; }
+        public ObservableCollection<FoodItemLookup> FoodItems { get; set; }
 
         public MenuViewModel(IFoodItemDataService foodItemDataService, IEventAggregator eventAggregator)
         {
@@ -22,27 +23,18 @@ namespace RestaurantEPOS.UI.ViewModel
             _eventAggregator.GetEvent<ShowCategoriesMenuItemEvent>()
                 .Subscribe(OnCategoriesChanged);
 
-            FoodItems = new ObservableCollection<LookupItem>();
+            FoodItems = new ObservableCollection<FoodItemLookup>();
         }
 
-        private void OnCategoriesChanged(int categoryId)
+        private async void OnCategoriesChanged(int categoryId)
         {
-
+            await LoadAsync(categoryId);
         }
 
-        //public async Task LoadAsync(int categoryId)
-        //{
-        //    var lookup = await _foodItemDataService.GetFoodItemAsync();
-        //    FoodItems.Clear();
-        //    foreach (var item in lookup)
-        //    {
-        //        FoodItems.Add(item);
-        //    }
-        //}
-
-        public async Task LoadAsync()
+        public async Task LoadAsync(int categoryId)
         {
-            var lookup = await _foodItemDataService.GetFoodItemAsync();
+            var allItems = await _foodItemDataService.GetFoodItemAsync();
+            var lookup = allItems.Where(x => x.CategoryId == categoryId);
             FoodItems.Clear();
             foreach (var item in lookup)
             {
