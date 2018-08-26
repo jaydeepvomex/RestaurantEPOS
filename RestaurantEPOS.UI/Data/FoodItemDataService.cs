@@ -1,5 +1,4 @@
-﻿using RestaurantEPOS.Model;
-using RestaurantEPOS.UI.Interface;
+﻿using RestaurantEPOS.UI.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;

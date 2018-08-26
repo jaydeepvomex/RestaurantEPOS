@@ -8,9 +8,18 @@
              d:DesignHeight="400" d:DesignWidth="400">
     <Grid Name="CategoryGridView">
         <!--Views-->
-        <ListView ItemsSource="{Binding Categories}" 
+        <ListView
+                  ItemsSource="{Binding Categories}" 
                   SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
-                  DisplayMemberPath="DisplayMember"/>
+                  DisplayMemberPath="DisplayMember"
+                  SelectionMode="Single">
+
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Height" Value="50" />
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
         <!--<ItemsControl ItemsSource="{Binding Categories}">
              --><!--ItemsPanelTemplate--><!-- 
             <ItemsControl.ItemsPanel>
