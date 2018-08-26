@@ -24,14 +24,14 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Price" Width="Auto">
+                    <GridViewColumn Header="Price (£)" Width="Auto">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Price}" TextAlignment="Right" Width="50" FontSize="12"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Total" Width="Auto">
+                    <GridViewColumn Header="Total (£)" Width="Auto">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Total}" TextAlignment="Right" Width="50" FontSize="12"/>
