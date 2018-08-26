@@ -27,7 +27,7 @@ namespace RestaurantEPOS.UI.Data
                     new FoodItemLookup
                     {
                         Id = f.Id,
-                        DisplayMember = f.Name,
+                        DisplayMember = f.Name.ToUpper(),
                         Price = f.Price,
                         CategoryId = f.CategoryId
                     })

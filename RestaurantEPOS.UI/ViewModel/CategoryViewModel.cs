@@ -27,7 +27,7 @@ namespace RestaurantEPOS.UI.ViewModel
             Categories.Clear();
             foreach (var item in lookup)
             {
-                Categories.Add(new CategoryItemViewModel(item.Id, item.DisplayMember));
+                Categories.Add(new CategoryItemViewModel(item.Id, item.DisplayMember.ToUpper()));
             }
         }
 
